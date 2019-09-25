@@ -1,0 +1,11 @@
+Write out the steps you think you'll need to complete this project. 
+It seems silly, but doing this with every project will help you grow into a better developer a lot faster.
+
+STEPS
+    pre-steps: install dependencies, redux and react-redux etc.
+1. Get all the folders i know i will need and the files created that i will need....actions...reducers..etc.
+2. refactor out the state from App.js into a reducer/reducers.
+3. Get the provider and store set up inside of the index.js
+4. Connect the components to the neccesary state using the connect HOC, mapStateToProps etc.
+5. set up handler functions for clicks and other things that will be needing the actions
+6. set up the actions in the actions folder using variables for the action.type
