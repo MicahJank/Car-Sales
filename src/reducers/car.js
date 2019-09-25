@@ -1,4 +1,4 @@
-// import action variables...
+import { ADD_FEATURE } from '../actions';
 
 const initialState = {
     price: 26395,
@@ -10,9 +10,13 @@ const initialState = {
 
   const car = (state = initialState, action) => {
       switch(action.type) {
-        // actions here
+        case ADD_FEATURE:
+          return {
+            ...state,
+            features: [...state.features, action.payload]
+          }
         default:
-            return state;
+          return state;
       }
   }
 
