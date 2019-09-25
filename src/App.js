@@ -38,8 +38,8 @@ const App = () => {
         <AddedFeatures />
       </div>
       <div className="box">
-        <AdditionalFeatures store={state.store} />
-        <Total car={state.car} additionalPrice={state.additionalPrice} />
+        <AdditionalFeatures />
+        <Total />
       </div>
     </div>
   );
