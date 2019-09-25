@@ -8,10 +8,12 @@ const initialState = {
     features: []
   }
 
-  export default car = (state = initialState, action) => {
+  const car = (state = initialState, action) => {
       switch(action.type) {
         // actions here
         default:
             return state;
       }
   }
+
+  export default car;

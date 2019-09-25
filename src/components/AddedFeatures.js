@@ -1,5 +1,9 @@
 import React from 'react';
 
+// actions can be imported here
+
+import { connect } from 'react-redux';
+
 import AddedFeature from './AddedFeature';
 
 const AddedFeatures = props => {
@@ -19,4 +23,10 @@ const AddedFeatures = props => {
   );
 };
 
-export default AddedFeatures;
+const mapStateToProps = (state) => {
+  return {
+    car: state.carReducer
+  }
+};
+
+export default connect(mapStateToProps, {})(AddedFeatures);

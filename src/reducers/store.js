@@ -7,10 +7,12 @@ const initialState = [
     { id: 4, name: 'Rear spoiler', price: 250 }
   ];
 
-  export default store = (state = initialState, action) => {
+   const store = (state = initialState, action) => {
       switch(action.type) {
         // cases
         default:
             return state;
       }
   }
+
+  export default store;
