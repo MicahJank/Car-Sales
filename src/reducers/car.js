@@ -1,4 +1,4 @@
-import { ADD_FEATURE } from '../actions';
+import { ADD_FEATURE, REMOVE_FEATURE } from '../actions';
 
 const initialState = {
     price: 26395,
@@ -14,6 +14,11 @@ const initialState = {
           return {
             ...state,
             features: [...state.features, action.payload]
+          }
+        case REMOVE_FEATURE:
+          return {
+            ...state,
+            features: state.features.filter(feature => feature.id !== action.payload.id)
           }
         default:
           return state;
