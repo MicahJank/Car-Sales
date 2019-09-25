@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { addFeature } from '../actions';
+import { addFeature, addFeaturePrice } from '../actions';
 
 import { connect } from 'react-redux';
 
@@ -11,6 +11,7 @@ const AdditionalFeatures = props => {
   const buyFeature = feature => {
     // dipsatch an action here to add an item
     props.addFeature(feature);
+    props.addFeaturePrice(feature.price);
   };
 
   return (
@@ -31,9 +32,8 @@ const AdditionalFeatures = props => {
 
 const mapStateToProps = (state) => {
   return {
-    store: state.storeReducer,
-    car: state.carReducer
+    store: state.storeReducer
   }
 }
 
-export default connect(mapStateToProps, { addFeature })(AdditionalFeatures);
+export default connect(mapStateToProps, { addFeature, addFeaturePrice })(AdditionalFeatures);
