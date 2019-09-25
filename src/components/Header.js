@@ -22,4 +22,5 @@ const mapStateToProps = (state) => {
   }
 }
 
+// no actions are dispatched from this component so that is why the {} is blank
 export default connect(mapStateToProps, {})(Header);
